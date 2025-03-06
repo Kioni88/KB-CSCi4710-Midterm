@@ -16,7 +16,7 @@ congestion_weights = {"Low": 1, "Medium": 1.5, "High": 2}
 mode = input("Select travel mode (walking/driving): ").strip().lower()  # Remove spaces and normalize case
 travel_modes = {'walking': 'walk', 'driving': 'drive'}
 if mode not in travel_modes:
-    print("❌ Invalid mode selected. Please type 'walking' or 'driving'.")
+    print("Invalid mode selected. Please type 'walking' or 'driving'.")
     exit()
 
 # Load graph for Farmington, NM
@@ -28,7 +28,7 @@ except Exception as e:
 
 # Ensure the graph is not empty
 if not G or len(G.nodes) == 0:
-    print("❌ Error: The graph G is empty. Check city name or internet connection.")
+    print("Error: The graph G is empty. Check city name or internet connection.")
     exit()
 
 # Convert traffic data into a GeoDataFrame for spatial operations
